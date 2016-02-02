@@ -1,0 +1,25 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+template <typename T>
+void fun(T& x)
+{
+  static int i = 10;
+  cout << ++i;
+  return;
+}
+ 
+int main()
+{ 
+int j=1;   
+  fun<int>(j);  // prints 11
+  cout << endl;
+  fun<int>(j);  // prints 12
+  cout << endl;
+  double w=1.1;
+  fun<double>(w); // prints 11
+  cout << endl;
+  //getchar();
+  return 0;
+}
